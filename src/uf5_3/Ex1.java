@@ -8,16 +8,23 @@ package uf5_3;
  *
  * @author Ramon
  */
-public class UF5_3 {
+public class Ex1 {
+
     public static void main(String[] args) {
         palíndrom("Amor a Roma");
     }
-    
-    public static String palíndrom(String str){
+
+    public static String palíndrom(String str) {
         StringBuilder strb = new StringBuilder();
+        str = str.toLowerCase();
         strb.append(str);
-        strb.reverse();
-        System.out.println(strb + " " + str);
+        strb.reverse().toString();
+        if (strb.equals(str)) {
+            System.out.println("Es un palindrom ");
+        } else {
+            System.out.println("No es un palindrom ");
+        }
+
         return str;
     }
 
